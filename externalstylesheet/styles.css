@@ -1,0 +1,51 @@
+body
+{
+  /* Remove unnecessary white space in body background .*/
+    margin:0;
+    padding:0%;
+}
+header
+{
+    display: flex;/*This defines a flex container; inline or block depending on the given value.
+                    It enables a flex context for all its direct children.*/
+    flex-wrap: nowrap;/*By default, flex items fit onto one line.
+                        It can be changed and allows the items to wrap as needed with this property.*/
+    background-color:white; /* set background color of the container header to white*/
+    height:100%;
+    width:100%;
+   
+ }
+ 
+  
+header > div        /* sets the style for direct children of the first element */ 
+{      
+    background-color:green; /* set background color of all the child items to green */
+   /* width:33%;*/
+    flex: 33%;         /* Flex is more suitable to use in place of flex-basis/flex-grow/flex-shrink.
+                       Flex-basis defines the default size of an element before the remaining space 
+                       is distributed.If set to 0, the extra space around content isn't factored in.
+                       If set to auto,the extra space is distributed based on its flex-grow value.
+                       Flex-grow defines the ability for a flex item to grow if necessary,based on
+                       the value assigned to it.*/
+    margin: 10px;     /* Margin sets the outer space of the element*/
+    padding:10px;     /* Padding sets the inner space of the element*/
+    text-align: center;
+    height:500px;  
+    align-items:stretch; /*This defines the default behaviour for how flex items are laid out along 
+                            the cross axis (perpendicular to the main-axis) .
+                            stretch is the default value to fill the container*/
+   
+}
+  
+/*Media queries are a technique for developing responsive web design
+  to desktops, laptops, tablets, and mobile phones.*/
+/* Media query uses breakpoints where certain parts of the page/ design
+   behave differently on each side of the break point.*/
+    
+@media only screen and (max-width:450px) 
+{
+  header > div  
+  {
+    height:600px;
+  }
+}
